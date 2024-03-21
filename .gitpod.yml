@@ -1,0 +1,10 @@
+image: gitpod/workspace-full
+
+tasks:
+  - init: "docker-compose up -d"
+    command: "sleep 10 && docker exec -it mysql mysql -uroot -proot"
+
+ports:
+  - port: 3306
+    onOpen: ignore
+    
