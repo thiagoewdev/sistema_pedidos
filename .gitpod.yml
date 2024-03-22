@@ -1,10 +1,11 @@
-image: gitpod/workspace-full
+image: gitpod/workspace-mysql # Usa a imagem do Gitpod que já tem MySQL
 
 tasks:
-  - init: "docker-compose up -d"
-    command: "sleep 10 && docker exec -it mysql mysql -uroot -proot"
+  - init: "npm install && npm run build" # Comandos para instalar dependências e construir seu projeto Node.js
+  - command: "npm start" # Comando para iniciar seu aplicativo Node.js
 
 ports:
+  - port: 3000
+    onOpen: open-preview # Abre uma pré-visualização do app na porta 3000
   - port: 3306
-    onOpen: ignore
-    
+    onOpen: ignore # Ignora a porta do MySQL, pois é usada internamente
