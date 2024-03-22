@@ -2,7 +2,7 @@ version: '3'
 
 services:
   app:
-    build: .
+    build: . # Constrói a imagem do aplicativo a partir do Dockerfile no diretório atual
     ports:
       - "3000:3000" # Expõe a porta 3000 para o serviço do app
     depends_on:
@@ -14,7 +14,7 @@ services:
       - DB_NAME=mydb # Define o nome do banco de dados
 
   db:
-    image: mysql:5.7 # Utiliza a imagem do MySQL versão 5.7
+    image: mysql:8.3.0 # Atualize para a versão desejada do MySQL
     ports:
       - "3306:3306" # Expõe a porta 3306 para o serviço do banco de dados
     environment:
