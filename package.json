@@ -1,0 +1,14 @@
+{
+  "name": "sistema_pedidos",
+  "version": "1.0.0",
+  "description": "Sistema de Pedidos de Materiais",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thiagoewdev",
+  "license": "ISC",
+  "dependencies": {
+    "mysql2": "^3.9.2"
+  }
+}
